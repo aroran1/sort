@@ -4,6 +4,9 @@
   "description": "## Without having to install typescript globally or to the project",
   "main": "index.js",
   "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/aroran1/sort/issues"
   },
-  "homepage": "https://github.com/aroran1/sort#readme"
+  "homepage": "https://github.com/aroran1/sort#readme",
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
+  }
 }
